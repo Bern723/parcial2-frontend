@@ -1,2 +1,2 @@
-Bernardo Alvarez Ciro
-Camilo De La Rosa Castañeda
+- Bernardo Alvarez Ciro
+- Camilo De La Rosa Castañeda
