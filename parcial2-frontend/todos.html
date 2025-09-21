@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To‑Do List • Parcial 2</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="js/auth.js"></script>
+  <script defer src="js/todos.js"></script>
+</head>
+<body class="grid-shell">
+  <header class="site-header">
+    <h1>Parcial 2 · Frontend (JS) — To‑Do List</h1>
+    <div class="header-actions">
+      <span id="welcome"></span>
+      <button id="logout-btn" class="btn danger">Logout</button>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="card" aria-labelledby="new-task-title">
+      <h2 id="new-task-title">Nueva tarea</h2>
+      <form id="task-form" class="task-form" novalidate>
+        <label class="sr-only" for="task-text">Descripción</label>
+        <input id="task-text" name="text" type="text" placeholder="Escribe una tarea (mín. 10 caracteres)..." />
+        <button class="btn primary" type="submit">Agregar</button>
+      </form>
+      <p id="task-error" class="error" role="alert" aria-live="polite"></p>
+    </section>
+
+    <section class="card" aria-labelledby="list-title">
+      <h2 id="list-title">Tus tareas</h2>
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Datos locales (localStorage) + datos externos (DummyJSON) — ordenados por fecha.</small>
+  </footer>
+
+  <template id="task-item-template">
+    <li class="task-item">
+      <div class="task-left">
+        <input type="checkbox" data-role="toggle"/>
+        <span class="task-text" data-role="text"></span>
+      </div>
+      <div class="task-right">
+        <time data-role="created"></time>
+        <button class="btn ghost" data-role="edit">Editar</button>
+        <button class="btn danger" data-role="delete">Eliminar</button>
+      </div>
+    </li>
+  </template>
+</body>
+</html>
